@@ -1,46 +1,168 @@
 <!doctype html>
 <html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-</head>
+  <body>
+    <header>
+      <ul>
+        <li class="active">Opret profil</li>
+        <li>Kontrol</li>
+        <li>Klar</li>
+      </ul>
+    </header>
+    <main>
+      <h1>Opret din førerprofil</h1>
+      <p class="har-profil">
+        Har du allerede en profil?
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+          >Log ind</a
+        >
+      </p>
+      <h2>Personlige oplysninger</h2>
+      <p>Alle felter markeret med * er obligatoriske</p>
 
-<body>
-  <header></header>
-  <main>
-    <h1>Opret din førerprofil</h1>
+      <form>
+        <fieldset class="Personlig-oplysninger">
+          <label for="fornavn">Fornavn *</label><br />
+          <input
+            autofocus
+            type="text"
+            minlength="2"
+            name="fornavn"
+            autocomplete="name"
+            required
+          /><br /><br />
 
-    <section class="Bekraeft-og-opret">
-      <h2> Bekræft og opret</h2>
+          <label for="efternavn">Efternavn *</label><br />
+          <input
+            type="text"
+            min="2"
+            name="efternavn"
+            autocomplete="additional-name"
+            required
+          /><br /><br />
 
-      <div class="Afkrydsning">
-        <input type="checkbox" id="gyldigt-koerekort" required>
-        <label for="gyldigt-koerekort">
-          Jeg bekræfter, at jeg er fyldt 21 år
-          og har et gyldigt kørekort.
-        </label>
-      </div>
+          <label for="email">E-mail *</label><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="navn@eksempel.dk"
+            autocomplete="email"
+            required
+          /><br /><br />
 
-      <div class="Afkrydsning">
-        <input type="checkbox" id="vilkaar-og-betingelser" required>
-        <label for="vilkaar-og-betingelser">
-          Jeg accepterer vilkår og betingelser samt privatlivspolitikken.
-        </label>
-      </div>
+          <label for="telefon">Telefon *</label><br />
+          <input
+            type="tel"
+            id="telefon"
+            placeholder="+45 12 34 56 78"
+            autocomplete="tel"
+            required
+          /><br /><br />
 
-      <div class="Afkrydsning">
-        <input type="checkbox" id="tilbud-og-nyheder">
-        <label for="tilbud-og-nyheder">
-          Send mig gerne tilbud, nyheder og inspiration til min næste køretur (valgfrit).
-        </label>
-      </div>
+          <label for="fødselsdato">Fødselsdato *</label><br />
+          <input
+            type="date"
+            id="fødselsdato"
+            name="fødselsdato"
+            required
+          /><br /><br />
 
-    </section>
+          <label for="password">Adgangskode *</label><br />
+          <input
+            type="password"
+            minlength="8"
+            name="adgangskode"
+            required
+          /><br /><br />
+        </fieldset>
 
-  </main>
-  <footer></footer>
-</body>
+        <fieldset class="kørekort-præferencer">
+          <label for="udstedelsesland">Udstedelsesland *</label><br />
+          <select name="udstedelsesland" pladeholder="Vælg et land" required>
+            <option value="" disabled selected hidden>Vælg et land</option>
+            <option value="danmark">Danmark</option>
+            <option value="norge">Norge</option>
+            <option value="sverige">Sverige</option>
+            <option value="finland">Finland</option>
+            <option value="tyskland">Tyskland</option></select
+          ><br /><br />
 
+          <label for="kørekortnummer">Kørekortnummer *</label><br />
+          <input
+            type="text"
+            id="kørekortnummer"
+            name="kørekortnummer"
+            placeholder="Indtast kørekortnummer"
+            required
+          /><br /><br />
+
+          <label for="forvent">Forventet antal lejedage om året (1-60) *</label
+          ><br />
+          <input
+            type="range"
+            id="forvent"
+            name="forvent"
+            min="1"
+            max="60"
+          /><br /><br />
+
+          <label for="særlige-ønsker">Særlige ønsker</label><br />
+          <textarea
+            id="særlige-ønsker"
+            name="særlige-ønsker"
+            rows="4"
+            maxlength="300"
+            placeholder="fx autogear, barnestol eller andet vi skal vide"
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <section class="bekræft-og-opret">
+            <h2>Bekræft og opret</h2>
+
+            <div class="Afkrydsning">
+              <input type="checkbox" id="gyldigt-kørekort" required />
+              <label for="gyldigt-kørekort">
+                Jeg bekræfter, at jeg er fyldt 21 år og har et gyldigt
+                kørekort.*
+              </label>
+            </div>
+
+            <div class="Afkrydsning">
+              <input type="checkbox" id="vilkår-og-betingelser" required />
+              <label for="vilkår-og-betingelser">
+                Jeg accepterer vilkår og betingelser samt privatlivspolitikken.*
+              </label>
+            </div>
+
+            <div class="Afkrydsning">
+              <input type="checkbox" id="tilbud-og-nyheder" />
+              <label for="tilbud-og-nyheder">
+                Send mig gerne tilbud, nyheder og inspiration til min næste
+                køretur (valgfrit).
+              </label>
+            </div>
+
+            <div class="datasikkerhed">
+              <h3>Dine oplysninger er i sikre hænder</h3>
+              <p>
+                Vi opbevarer alle dine oplysninger sikkert og krypeteret. Du kan
+                til enhver en tid se, rette eller slette dine oplysninger.
+              </p>
+            </div>
+
+            <button class="opret-profil" type="submit">Opret profil</button>
+          </section>
+        </fieldset>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
 </html>

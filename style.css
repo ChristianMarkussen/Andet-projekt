@@ -4,3 +4,15 @@
   --border-color: #e0e0e0;
   --text-color: #333;
 }
+main {
+  background-color: var(--background-color);
+  text-decoration: var(--text-color);
+}
+.har-profil {
+  color: var(--text-color);
+}
+.har-profil a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
