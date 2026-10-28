@@ -4,9 +4,17 @@
   --border-color: #e0e0e0;
   --text-color: #333;
 }
-main {
+
+body {
   background-color: var(--background-color);
+  margin: 0;
+}
+
+main {
   text-decoration: var(--text-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
 }
 .har-profil {
   color: var(--text-color);
@@ -14,5 +22,84 @@ main {
 .har-profil a {
   text-decoration: none;
   color: var(--primary-color);
+  font-weight: bold;
+}
+
+.hero-section {
+  background-image: url(https://static.posters.cz/image/750/245051.jpg);
+  /* Insert car image over */
+}
+
+.hero-section h2 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.hero-section h3 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.hr-line::before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: var(--primary-color);
+}
+
+.hr-line {
+  position: relative;
+  padding-left: 40px;
+}
+
+.hero-padding {
+  margin-left: 6.7%;
+  margin-right: 6.7%;
+}
+
+.info-box {
+  padding: 0;
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid black;
+  border-color: var(--border-color);
+  max-width: 67%;
+  backdrop-filter: blur(12px);
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.info-box li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 35px;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 11px;
   font-weight: bold;
 }

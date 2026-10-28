@@ -8,160 +8,175 @@
   </head>
 
   <body>
-    <header>
-      <ul>
-        <li class="active">Opret profil</li>
-        <li>Kontrol</li>
-        <li>Klar</li>
-      </ul>
-    </header>
+    <header></header>
     <main>
-      <h1>Opret din førerprofil</h1>
-      <p class="har-profil">
-        Har du allerede en profil?
-        <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
-          >Log ind</a
-        >
-      </p>
-      <h2>Personlige oplysninger</h2>
-      <p>Alle felter markeret med * er obligatoriske</p>
+      <!-- Left Side -->
+      <div class="hero-section">
+        <div class="header hero-padding">
+          <h3 class="logo"><a>KØR</a></h3>
+          <p><a>Brug for hjælp?</a></p>
+        </div>
 
-      <form>
-        <fieldset class="Personlig-oplysninger">
-          <label for="fornavn">Fornavn *</label><br />
-          <input
-            autofocus
-            type="text"
-            minlength="2"
-            name="fornavn"
-            autocomplete="name"
-            required
-          /><br /><br />
+        <div class="hero-padding">
+          <h3 class="hr-line">FRIHED PÅ FIRE HJUL</h3>
+          <h2>Din næste tur starter her.</h2>
+          <p>
+            Opret din førerprofil én gang, og kom hurtigere gennem bookingen
+            næste gang.
+          </p>
+        </div>
+        <div class="info-box hero-padding">
+          <ul>
+            <li>Hurtigere booking og afhentning</li>
+            <li>Sikker opbevaring af føreroplysninger</li>
+            <li>Personlige bilforslag og medlemstilbud</li>
+          </ul>
+        </div>
+      </div>
 
-          <label for="efternavn">Efternavn *</label><br />
-          <input
-            type="text"
-            min="2"
-            name="efternavn"
-            autocomplete="additional-name"
-            required
-          /><br /><br />
+      <!-- Right side -->
+      <div class="signup-section">
+        <ul>
+          <li class="status-point active">Opret profil</li>
+          <li class="status-point">Kontrol</li>
+          <li class="status-point">Klar</li>
+        </ul>
 
-          <label for="email">E-mail *</label><br />
-          <input
-            type="email"
-            id="email"
-            placeholder="navn@eksempel.dk"
-            autocomplete="email"
-            required
-          /><br /><br />
+        <h2>KOM HURTIGERE AFSTED</h2>
+        <h1>Opret din førerprofil</h1>
+        <p class="har-profil">
+          Har du allerede en profil?
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+            >Log ind</a
+          >
+        </p>
 
-          <label for="telefon">Telefon *</label><br />
-          <input
-            type="tel"
-            id="telefon"
-            placeholder="+45 12 34 56 78"
-            autocomplete="tel"
-            required
-          /><br /><br />
+        <form>
+          <fieldset class="Personlig-oplysninger">
+            <h2>Personlige oplysninger</h2>
+            <p>Alle felter markeret med * er obligatoriske</p>
+            <label for="fornavn">Fornavn *</label>
+            <input
+              autofocus
+              type="text"
+              minlength="2"
+              name="fornavn"
+              autocomplete="name"
+              required
+            />
 
-          <label for="fødselsdato">Fødselsdato *</label><br />
-          <input
-            type="date"
-            id="fødselsdato"
-            name="fødselsdato"
-            required
-          /><br /><br />
+            <label for="efternavn">Efternavn *</label>
+            <input
+              type="text"
+              min="2"
+              name="efternavn"
+              autocomplete="additional-name"
+              required
+            />
 
-          <label for="password">Adgangskode *</label><br />
-          <input
-            type="password"
-            minlength="8"
-            name="adgangskode"
-            required
-          /><br /><br />
-        </fieldset>
+            <label for="email">E-mail *</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="navn@eksempel.dk"
+              autocomplete="email"
+              required
+            />
 
-        <fieldset class="kørekort-præferencer">
-          <label for="udstedelsesland">Udstedelsesland *</label><br />
-          <select name="udstedelsesland" pladeholder="Vælg et land" required>
-            <option value="" disabled selected hidden>Vælg et land</option>
-            <option value="danmark">Danmark</option>
-            <option value="norge">Norge</option>
-            <option value="sverige">Sverige</option>
-            <option value="finland">Finland</option>
-            <option value="tyskland">Tyskland</option></select
-          ><br /><br />
+            <label for="telefon">Telefon *</label>
+            <input
+              type="tel"
+              id="telefon"
+              placeholder="+45 12 34 56 78"
+              autocomplete="tel"
+              required
+            />
 
-          <label for="kørekortnummer">Kørekortnummer *</label><br />
-          <input
-            type="text"
-            id="kørekortnummer"
-            name="kørekortnummer"
-            placeholder="Indtast kørekortnummer"
-            required
-          /><br /><br />
+            <label for="fødselsdato">Fødselsdato *</label>
+            <input type="date" id="fødselsdato" name="fødselsdato" required />
 
-          <label for="forvent">Forventet antal lejedage om året (1-60) *</label
-          ><br />
-          <input
-            type="range"
-            id="forvent"
-            name="forvent"
-            min="1"
-            max="60"
-          /><br /><br />
+            <label for="password">Adgangskode *</label>
+            <input type="password" minlength="8" name="adgangskode" required />
+          </fieldset>
 
-          <label for="særlige-ønsker">Særlige ønsker</label><br />
-          <textarea
-            id="særlige-ønsker"
-            name="særlige-ønsker"
-            rows="4"
-            maxlength="300"
-            placeholder="fx autogear, barnestol eller andet vi skal vide"
-          ></textarea>
-        </fieldset>
+          <fieldset class="kørekort-præferencer">
+            <h2>Kørekort og præferencer</h2>
+            <label for="udstedelsesland">Udstedelsesland *</label>
+            <select name="udstedelsesland" pladeholder="Vælg et land" required>
+              <option value="" disabled selected hidden>Vælg et land</option>
+              <option value="danmark">Danmark</option>
+              <option value="norge">Norge</option>
+              <option value="sverige">Sverige</option>
+              <option value="finland">Finland</option>
+              <option value="tyskland">Tyskland</option>
+            </select>
 
-        <fieldset>
-          <section class="bekræft-og-opret">
-            <h2>Bekræft og opret</h2>
+            <label for="kørekortnummer">Kørekortnummer *</label>
+            <input
+              type="text"
+              id="kørekortnummer"
+              name="kørekortnummer"
+              placeholder="Indtast kørekortnummer"
+              required
+            />
 
-            <div class="Afkrydsning">
-              <input type="checkbox" id="gyldigt-kørekort" required />
-              <label for="gyldigt-kørekort">
-                Jeg bekræfter, at jeg er fyldt 21 år og har et gyldigt
-                kørekort.*
-              </label>
-            </div>
+            <label for="forvent"
+              >Forventet antal lejedage om året (1-60) *</label
+            >
+            <input type="range" id="forvent" name="forvent" min="1" max="60" />
 
-            <div class="Afkrydsning">
-              <input type="checkbox" id="vilkår-og-betingelser" required />
-              <label for="vilkår-og-betingelser">
-                Jeg accepterer vilkår og betingelser samt privatlivspolitikken.*
-              </label>
-            </div>
+            <label for="særlige-ønsker">Særlige ønsker</label>
+            <textarea
+              id="særlige-ønsker"
+              name="særlige-ønsker"
+              rows="4"
+              maxlength="300"
+              placeholder="fx autogear, barnestol eller andet vi skal vide"
+            ></textarea>
+          </fieldset>
 
-            <div class="Afkrydsning">
-              <input type="checkbox" id="tilbud-og-nyheder" />
-              <label for="tilbud-og-nyheder">
-                Send mig gerne tilbud, nyheder og inspiration til min næste
-                køretur (valgfrit).
-              </label>
-            </div>
+          <fieldset>
+            <section class="bekræft-og-opret">
+              <h2>Bekræft og opret</h2>
 
-            <div class="datasikkerhed">
-              <h3>Dine oplysninger er i sikre hænder</h3>
-              <p>
-                Vi opbevarer alle dine oplysninger sikkert og krypeteret. Du kan
-                til enhver en tid se, rette eller slette dine oplysninger.
-              </p>
-            </div>
+              <div class="Afkrydsning">
+                <input type="checkbox" id="gyldigt-kørekort" required />
+                <label for="gyldigt-kørekort">
+                  Jeg bekræfter, at jeg er fyldt 21 år og har et gyldigt
+                  kørekort.*
+                </label>
+              </div>
 
-            <button class="opret-profil" type="submit">Opret profil</button>
-          </section>
-        </fieldset>
-      </form>
+              <div class="Afkrydsning">
+                <input type="checkbox" id="vilkår-og-betingelser" required />
+                <label for="vilkår-og-betingelser">
+                  Jeg accepterer vilkår og betingelser samt
+                  privatlivspolitikken.*
+                </label>
+              </div>
+
+              <div class="Afkrydsning">
+                <input type="checkbox" id="tilbud-og-nyheder" />
+                <label for="tilbud-og-nyheder">
+                  Send mig gerne tilbud, nyheder og inspiration til min næste
+                  køretur (valgfrit).
+                </label>
+              </div>
+
+              <div class="datasikkerhed">
+                <h3>Dine oplysninger er i sikre hænder</h3>
+                <p>
+                  Vi opbevarer alle dine oplysninger sikkert og krypeteret. Du
+                  kan til enhver en tid se, rette eller slette dine oplysninger.
+                </p>
+              </div>
+
+              <button class="opret-profil" type="submit">Opret profil</button>
+            </section>
+          </fieldset>
+        </form>
+      </div>
     </main>
     <footer></footer>
   </body>
