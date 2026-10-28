@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -56,15 +60,20 @@
           <fieldset class="Personlig-oplysninger">
             <h2>Personlige oplysninger</h2>
             <p>Alle felter markeret med * er obligatoriske</p>
-            <label for="fornavn">Fornavn *</label>
-            <input
-              autofocus
-              type="text"
-              minlength="2"
-              name="fornavn"
-              autocomplete="name"
-              required
-            />
+
+            <div class="form-floating">
+              <input
+                autofocus
+                type="text"
+                minlength="2"
+                name="fornavn"
+                class="form-control"
+                autocomplete="name"
+                placeholder="Dit navn"
+                required
+              />
+              <label for="fornavn">Fornavn *</label>
+            </div>
 
             <label for="efternavn">Efternavn *</label>
             <input
