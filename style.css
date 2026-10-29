@@ -74,17 +74,20 @@ main {
 
 .info-box ul {
   list-style: none;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-inline: 10px;
+}
+
+.info-box li:nth-child(1) {
+  margin-top: 12px;
 }
 
 .info-box li {
   position: relative;
-  margin-bottom: 12px;
   padding-left: 35px;
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .info-box li::before {
