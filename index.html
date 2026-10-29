@@ -10,9 +10,7 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <header></header>
     <main>
       <!-- Left Side -->
       <div class="hero-section">
@@ -40,7 +38,7 @@
 
       <!-- Right side -->
       <div class="signup-section">
-        <ul>
+        <ul class="status-bar">
           <li class="status-point active">Opret profil</li>
           <li class="status-point">Kontrol</li>
           <li class="status-point">Klar</li>
@@ -130,7 +128,7 @@
               required
             />
 
-            <label for="forvent"
+            <label for="forvent" class="forvent"
               >Forventet antal lejedage om året (1-60) *</label
             >
             <input type="range" id="forvent" name="forvent" min="1" max="60" />
@@ -187,6 +185,5 @@
         </form>
       </div>
     </main>
-    <footer></footer>
   </body>
 </html>

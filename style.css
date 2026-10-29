@@ -14,11 +14,9 @@ main {
   text-decoration: var(--text-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: 100dvh;
 }
-.har-profil {
-  color: var(--text-color);
-}
+
 .har-profil a {
   text-decoration: none;
   color: var(--primary-color);
@@ -26,8 +24,11 @@ main {
 }
 
 .hero-section {
-  background-image: url(https://static.posters.cz/image/750/245051.jpg);
-  /* Insert car image over */
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/121/111/small_2x/car-driving-on-a-wet-road-with-headlights-illuminating-the-rain-in-a-dark-forest-photo.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+  color: var(--background-color);
 }
 
 .hero-section h2 {
@@ -60,6 +61,9 @@ main {
 .hero-padding {
   margin-left: 6.7%;
   margin-right: 6.7%;
+}
+.hero-padding h2 {
+  font-size: 5rem;
 }
 
 .info-box {
@@ -112,4 +116,25 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 25px;
+}
+.status-bar {
+  display: flex;
+  gap: 10%;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.status-point {
+  padding: 5px;
+  border-bottom: 2px solid var(--border-color);
+  flex: 1;
+  text-align: center;
+}
+.status-point.active {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#forvent {
+  accent-color: var(--primary-color);
+  width: 30%;
 }
