@@ -222,7 +222,7 @@ input[type="checkbox"] {
 .bil-muligheder {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .bil-mulighed {
@@ -269,4 +269,9 @@ input[type="checkbox"] {
   font-weight: bold;
   margin-bottom: 20px;
   color: #35443d;
+}
+
+form fieldset {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
