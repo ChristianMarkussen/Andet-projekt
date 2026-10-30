@@ -143,7 +143,12 @@ main {
   accent-color: var(--primary-color);
   width: 30%;
 }
-.form-floating {
+.fieldset input {
   flex-direction: column;
   gap: 20px;
+}
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
