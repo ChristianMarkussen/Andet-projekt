@@ -143,11 +143,11 @@ main {
   accent-color: var(--primary-color);
   width: 30%;
 }
-.fieldset input {
+fieldset input {
   flex-direction: column;
   gap: 20px;
 }
-.fieldset {
+fieldset {
   display: flex;
   flex-direction: column;
   border: none;
