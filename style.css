@@ -179,13 +179,19 @@ fieldset {
 .afkrydsning input {
   width: 20px;
   height: 20px;
-  accent-color: black;
+  accent-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
 }
 
 .datasikkerhed {
   background-color: #f3f4f6;
   border-radius: 10px;
   padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .bil-selektioner {
