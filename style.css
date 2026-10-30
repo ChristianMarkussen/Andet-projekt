@@ -23,6 +23,10 @@ main {
   color: var(--primary-color);
   font-weight: bold;
 }
+.har-profil a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
 
 .hero-section {
   background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/121/111/small_2x/car-driving-on-a-wet-road-with-headlights-illuminating-the-rain-in-a-dark-forest-photo.jpeg");
@@ -138,4 +142,8 @@ main {
 #forvent {
   accent-color: var(--primary-color);
   width: 30%;
+}
+.form-floating {
+  flex-direction: column;
+  gap: 20px;
 }
