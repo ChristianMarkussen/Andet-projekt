@@ -164,15 +164,17 @@ fieldset input {
 }
 
 .inputBox input {
-  padding: 8px;
+  padding: 10px;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
+  margin-top: 5px;
 }
 
 .inputBox select {
-  padding: 8px;
-  border-radius: 6px;
+  padding: 10px;
+  border-radius: 0.5rem;
   border: 1px solid var(--border-color);
+  margin-top: 5px;
 }
 
 fieldset {
