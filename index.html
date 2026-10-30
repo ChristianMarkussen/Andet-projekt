@@ -64,97 +64,118 @@
             </div>
             <p>Alle felter markeret med * er obligatoriske</p>
 
-            <label for="fornavn">Fornavn*</label>
-            <input
-              type="text"
-              autofocus
-              id="fornavn"
-              placeholder="Dit navn"
-              minlength="2"
-              name="fornavn"
-              autocomplete="given-name"
-              required
-            />
+            <section class="inputBox">
+              <div>
+                <label for="fornavn">Fornavn*</label>
+                <input
+                  type="text"
+                  autofocus
+                  id="fornavn"
+                  placeholder="Dit fornavn"
+                  minlength="2"
+                  name="fornavn"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
 
-            <label for="efternavn">Efternavn*</label>
-            <input
-              type="text"
-              minlength="2"
-              name="efternavn"
-              id="efternavn"
-              placeholder="Dit Efternavn"
-              autocomplete="family-name"
-              required
-            />
+              <div>
+                <label for="efternavn">Efternavn*</label>
+                <input
+                  type="text"
+                  minlength="2"
+                  name="efternavn"
+                  id="efternavn"
+                  placeholder="Dit efternavn"
+                  autocomplete="family-name"
+                  required
+                />
+              </div>
 
-            <label for="email">E-mail*</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              inputmode="email"
-              placeholder="navn@eksempel.dk"
-              autocomplete="email"
-              required
-            />
+              <div>
+                <label for="email">E-mail*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  inputmode="email"
+                  placeholder="navn@eksempel.dk"
+                  autocomplete="email"
+                  required
+                />
+              </div>
 
-            <label for="telefon">Telefon*</label>
-            <input
-              type="tel"
-              id="telefon"
-              name="telefon"
-              placeholder="+45 12 34 56 78"
-              autocomplete="tel"
-              required
-            />
+              <div>
+                <label for="telefon">Telefon*</label>
+                <input
+                  type="tel"
+                  id="telefon"
+                  name="telefon"
+                  placeholder="+45 12 34 56 78"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
 
-            <label for="fødselsdato">Fødselsdato*</label>
-            <input
-              type="date"
-              name="fødselsdato"
-              id="fødselsdato"
-              autocomplete="bday"
-              required
-            />
+              <div>
+                <label for="fødselsdato">Fødselsdato*</label>
+                <input
+                  type="date"
+                  name="fødselsdato"
+                  id="fødselsdato"
+                  autocomplete="bday"
+                  required
+                />
+              </div>
 
-            <label for="password"
-              ><abbr title="Minimum 8 characters">Adgangskode*</abbr>
-            </label>
-            <input
-              type="password"
-              minlength="8"
-              name="adgangskode"
-              id="password"
-              autocomplete="new-password"
-              required
-            />
+              <div>
+                <label for="password"
+                  ><abbr title="Minimum 8 characters">Adgangskode*</abbr>
+                </label>
+                <input
+                  type="password"
+                  minlength="8"
+                  name="adgangskode"
+                  id="password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+            </section>
           </fieldset>
           <hr />
+
           <fieldset class="kørekort-præferencer">
             <div class="sektion-overskrift">
               <span class="overskrift-nummer">02</span>
               <h2>Kørekort og præferencert</h2>
             </div>
 
-            <select id="udstedelsesland" name="udstedelsesland" required>
-              <option value="" disabled selected>Vælg et land*</option>
-              <option value="danmark">Danmark</option>
-              <option value="norge">Norge</option>
-              <option value="sverige">Sverige</option>
-            </select>
+            <section class="inputBox">
+              <div>
+                <label for="udstedelsesland">Udstedt i*</label>
+                <select id="udstedelsesland" name="udstedelsesland" required>
+                  <option value="" disabled selected>Vælg et land*</option>
+                  <option value="danmark">Danmark</option>
+                  <option value="norge">Norge</option>
+                  <option value="sverige">Sverige</option>
+                </select>
+              </div>
 
-            <label for="kørekortnummer">Kørekortnummer*</label>
-            <input
-              type="text"
-              inputmode="numeric"
-              pattern="[0-9]{8}"
-              id="kørekortnummer"
-              name="kørekortnummer"
-              placeholder="Indtast kørekortnummer"
-              maxlength="8"
-              required
-            />
-
+              <div>
+                <label for="kørekortnummer">Kørekortnummer*</label>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]{8}"
+                  id="kørekortnummer"
+                  name="kørekortnummer"
+                  placeholder="Indtast kørekortnummer"
+                  maxlength="8"
+                  required
+                />
+              </div>
+            </section>
             <div class="bil-selektioner">
               <p class="bil-heading">Foretrukken biltype *</p>
 

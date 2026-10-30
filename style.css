@@ -146,6 +146,35 @@ main {
 fieldset input {
   flex-direction: column;
 }
+
+.inputBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.inputBox div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.inputBox input {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.inputBox select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
@@ -267,6 +296,16 @@ input[type="checkbox"] {
 .bil-mulighed:has(input:focus-visible) {
   outline: 3px solid #82988a;
   outline-offset: 3px;
+}
+
+/* Gemmer checkmark ikonet */
+.bil-mulighed input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
 }
 
 .bil-heading {
