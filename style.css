@@ -153,9 +153,101 @@ fieldset {
 }
 
 .overskrift-nummer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color: white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.sektion-overskrift {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.afkrydsning {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.afkrydsning input {
+  width: 20px;
+  height: 20px;
+  accent-color: black;
+}
+
+.datasikkerhed {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.bil-selektioner {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bil-selektioner legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #35443d;
+}
+
+.bil-muligheder {
+  display: flex;
+  gap: 20px;
+}
+
+.bil-mulighed {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  border: 2px solid #d8d9d4;
+  border-radius: 18px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.bil-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #35443d;
+}
+
+.bil-beskrivelse {
+  font-size: 16px;
+  color: #858b87;
+}
+
+/* Selected card */
+.bil-mulighed:has(input:checked) {
+  border-color: #35443d;
+  background: #eaf0eb;
+}
+
+/* Keyboard accessibility */
+.bil-mulighed:has(input:focus-visible) {
+  outline: 3px solid #82988a;
+  outline-offset: 3px;
+}
+
+.bil-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #35443d;
 }

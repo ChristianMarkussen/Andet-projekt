@@ -95,12 +95,12 @@
               required
             />
 
-            <label for="telefon">Telefon* +45</label>
+            <label for="telefon">Telefon*</label>
             <input
               type="tel"
               id="telefon"
               name="telefon"
-              placeholder="12 34 56 78"
+              placeholder="+45 12 34 56 78"
               autocomplete="tel"
               required
             />
@@ -131,7 +131,7 @@
             <h2>Kørekort og præferencer</h2>
 
             <select id="udstedelsesland" name="udstedelsesland" required>
-              <option value="" disabled selected>Vælg et land</option>
+              <option value="" disabled selected>Vælg et land*</option>
               <option value="danmark">Danmark</option>
               <option value="norge">Norge</option>
               <option value="sverige">Sverige</option>
@@ -149,6 +149,30 @@
               required
             />
 
+            <div class="bil-selektioner">
+              <p class="bil-heading">Foretrukken biltype *</p>
+
+              <div class="bil-muligheder">
+                <label class="bil-mulighed">
+                  <input type="checkbox" name="biltype" value="bybil" />
+                  <span class="bil-title">Bybil</span>
+                  <span class="bil-beskrivelse">Nem og økonomisk</span>
+                </label>
+
+                <label class="bil-mulighed">
+                  <input type="checkbox" name="biltype" value="suv" />
+                  <span class="bil-title">SUV</span>
+                  <span class="bil-beskrivelse">Plads til det hele</span>
+                </label>
+
+                <label class="bil-mulighed">
+                  <input type="checkbox" name="biltype" value="elbil" />
+                  <span class="bil-title">Elbil</span>
+                  <span class="bil-beskrivelse">Stille og elektrisk</span>
+                </label>
+              </div>
+            </div>
+
             <label for="forvent" class="forvent"
               >Forventet antal lejedage om året (1-60)*</label
             >
@@ -160,13 +184,13 @@
               name="særlige-ønsker"
               rows="4"
               maxlength="300"
-              placeholder="fx automatgir, barnestol eller andet vi skal vide"
+              placeholder="fx automatgear, barnestol eller andet vi skal vide"
             ></textarea>
           </fieldset>
 
           <fieldset>
             <section class="bekræft-og-opret">
-              <div class="section-overskrift">
+              <div class="sektion-overskrift">
                 <span class="overskrift-nummer">03</span>
                 <h2>Bekræft og opret</h2>
               </div>
