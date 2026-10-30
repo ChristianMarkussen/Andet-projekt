@@ -114,7 +114,9 @@
               required
             />
 
-            <label for="password">Adgangskode*</label>
+            <label for="password"
+              ><abbr title="Minimum 8 characters">Adgangskode*</abbr>
+            </label>
             <input
               type="password"
               minlength="8"
@@ -143,7 +145,6 @@
               id="kørekortnummer"
               name="kørekortnummer"
               placeholder="Indtast kørekortnummer"
-              minlength="8"
               maxlength="8"
               required
             />
@@ -165,7 +166,10 @@
 
           <fieldset>
             <section class="bekræft-og-opret">
-              <h2>Bekræft og opret</h2>
+              <div class="section-overskrift">
+                <span class="overskrift-nummer">03</span>
+                <h2>Bekræft og opret</h2>
+              </div>
 
               <div class="Afkrydsning">
                 <input type="checkbox" id="gyldigt-kørekort" required />
