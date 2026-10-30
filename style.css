@@ -206,6 +206,11 @@ input[type="checkbox"] {
   margin-left: auto;
 }
 
+.opret-profil:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
 .bil-selektioner {
   border: none;
   padding: 0;
