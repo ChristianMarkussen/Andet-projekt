@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <main>
@@ -60,111 +56,83 @@
           >
         </p>
 
-        <form class="needs-validation" novalidate>
+        <form>
           <fieldset class="Personlig-oplysninger">
             <h2>Personlige oplysninger</h2>
             <p>Alle felter markeret med * er obligatoriske</p>
 
-            <div class="form-floating">
-              <input
-                type="text"
-                class="form-control"
-                id="floatingInput"
-                placeholder="Dit navn"
-                minlength="2"
-                name="fornavn"
-                autocomplete="given-name"
-                required
-              />
-              <label for="floatingInput">Fornavn*</label>
-              <div class="invalid-feedback">Indtast venligst dit fornavn.</div>
-            </div>
+            <label for="fornavn">Fornavn*</label>
+            <input
+              type="text"
+              autofocus
+              id="fornavn"
+              placeholder="Dit navn"
+              minlength="2"
+              name="fornavn"
+              autocomplete="given-name"
+              required
+            />
 
-            <div class="form-floating">
-              <input
-                type="text"
-                minlength="2"
-                class="form-control"
-                name="efternavn"
-                id="efternavn"
-                placeholder="Dit Efternavn"
-                autocomplete="family-name"
-                required
-              />
-              <label for="efternavn">Efternavn*</label>
-            </div>
+            <label for="efternavn">Efternavn*</label>
+            <input
+              type="text"
+              minlength="2"
+              name="efternavn"
+              id="efternavn"
+              placeholder="Dit Efternavn"
+              autocomplete="family-name"
+              required
+            />
 
-            <div class="form-floating">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="navn@eksempel.dk"
-                class="form-control"
-                autocomplete="email"
-                required
-              />
-              <label for="email">E-mail*</label>
-            </div>
+            <label for="email">E-mail*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="navn@eksempel.dk"
+              autocomplete="email"
+              required
+            />
 
-            <div class="form-floating">
-              <input
-                type="tel"
-                id="telefon"
-                name="telefon"
-                class="form-control"
-                placeholder="12 34 56 78"
-                autocomplete="tel"
-                required
-              />
-              <label for="telefon">Telefon* +45</label>
-            </div>
+            <label for="telefon">Telefon* +45</label>
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              placeholder="12 34 56 78"
+              autocomplete="tel"
+              required
+            />
 
-            <div class="form-floating">
-              <input
-                type="date"
-                name="fødselsdato"
-                id="fødselsdato"
-                class="form-control"
-                autocomplete="bday"
-                required
-              />
-              <label for="fødselsdato">Fødselsdato*</label>
-            </div>
+            <label for="fødselsdato">Fødselsdato*</label>
+            <input
+              type="date"
+              name="fødselsdato"
+              id="fødselsdato"
+              autocomplete="bday"
+              required
+            />
 
-            <div class="form-floating">
-              <input
-                type="password"
-                minlength="8"
-                name="adgangskode"
-                class="form-control"
-                id="password"
-                autocomplete="new-password"
-                required
-              />
-              <label for="password">Adgangskode*</label>
-              <div class="invalid-feedback">
-                Adgangskoden skal være mindst 8 tegn.
-              </div>
-            </div>
+            <label for="password">Adgangskode*</label>
+            <input
+              type="password"
+              minlength="8"
+              name="adgangskode"
+              id="password"
+              autocomplete="new-password"
+              required
+            />
           </fieldset>
 
           <fieldset class="kørekort-præferencer">
             <h2>Kørekort og præferencer</h2>
 
-            <select
-              class="form-select"
-              id="udstedelsesland"
-              name="udstedelsesland"
-              required
-            >
+            <select id="udstedelsesland" name="udstedelsesland" required>
               <option value="" disabled selected>Vælg et land</option>
               <option value="danmark">Danmark</option>
               <option value="norge">Norge</option>
               <option value="sverige">Sverige</option>
             </select>
-
-            <div class="invalid-feedback">Vælg venligst et land.</div>
 
             <label for="kørekortnummer">Kørekortnummer*</label>
             <input
@@ -234,24 +202,5 @@
         </form>
       </div>
     </main>
-
-    <script>
-      (() => {
-        "use strict";
-
-        const forms = document.querySelectorAll(".needs-validation");
-
-        forms.forEach((form) => {
-          form.addEventListener("submit", (event) => {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-
-            form.classList.add("was-validated");
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
