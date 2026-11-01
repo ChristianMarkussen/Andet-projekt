@@ -18,23 +18,7 @@ main {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-@media (max-width: 1000px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  .hero-section {
-    order: 2;
-  }
-  .signup-section {
-    order: 1;
-  }
-}
 
-@media (max-width: 760px) {
-  .inputBox {
-    grid-template-columns: 1fr !important;
-  }
-}
 
 .har-profil a {
   text-decoration: none;
@@ -210,11 +194,11 @@ fieldset input {
   margin-top: 5px;
 }
 
-.inputBox input:invalid {
+.inputBox input:user-invalid {
   border: 2px solid red;
 }
 
-.inputBox input:valid {
+.inputBox input:user-valid {
   border: 2px solid green;
 }
 
@@ -374,4 +358,21 @@ form fieldset {
 
 .kørekort-præferencer {
   gap: 20px;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .hero-section {
+    order: 2;
+  }
+  .signup-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .inputBox {
+    grid-template-columns: 1fr !important;
+  }
 }
