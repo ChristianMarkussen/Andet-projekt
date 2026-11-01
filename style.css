@@ -18,6 +18,12 @@ main {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
 .har-profil a {
   text-decoration: none;
   color: var(--primary-color);
