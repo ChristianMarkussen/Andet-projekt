@@ -16,7 +16,7 @@
           <p class="har-profil">
             Brug for
             <a
-              href="https://www.google.com/search?q=how+to+not+get+rick+rolled&oq=how+to+not+get+rick+rolled&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQABiGAxiABBiKBTINCAIQABiGAxiABBiKBdIBCDQwNzhqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8"
+              href="https://www.google.com/search?q=help+me+i+don%27t+want+to+get+rick+rolled&oq=help+me%2C+i+don%27t+want+to+&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRiPAjIHCAUQIRiPAtIBCTE1MjMzajBqOagCBrACAfEF0I9UN5GAbiA&sourceid=chrome&source=chrome.ob&ie=UTF-8"
               >hjælp</a
             >?
           </p>
@@ -60,7 +60,7 @@
         <form>
           <fieldset class="Personlig-oplysninger">
             <div class="sektion-overskrift">
-              <span class="overskrift-nummer">01</span>
+              <span class="overskrift-nummer" aria-hidden="true">01</span>
               <h2>Personlig-oplysninger</h2>
             </div>
             <p>Alle felter markeret med * er obligatoriske</p>
@@ -161,45 +161,80 @@
                   <option value="danmark">Danmark</option>
                   <option value="norge">Norge</option>
                   <option value="sverige">Sverige</option>
+                  <option value="tyskland">Tyskland</option>
+                  <option value="frankrig">Frankrig</option>
+                  <option value="italien">Italien</option>
+                  <option value="spanien">Spanien</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">Storbritannien</option>
+                  <option value="ukraine">Ukraine</option>
+                  <option value="grækenland">Grækenland</option>
+                  <option value="polen">Polen</option>
+                  <option value="holland">Holland</option>
+                  <option value="belgien">Belgien</option>
+                  <option value="østrig">Østrig</option>
+                  <option value="schweiz">Schweiz</option>
+                  <option value="portugal">Portugal</option>
+                  <option value="finland">Finland</option>
+                  <option value="irland">Irland</option>
+                  <option value="island">Island</option>
+                  <option value="luxembourg">Luxembourg</option>
+                  <option value="tjekkiet">Tjekkiet</option>
+                  <option value="ungarn">Ungarn</option>
+                  <option value="slovakiet">Slovakiet</option>
+                  <option value="kroatien">Kroatien</option>
+                  <option value="slovenien">Slovenien</option>
+                  <option value="bulgarien">Bulgarien</option>
+                  <option value="rumænien">Rumænien</option>
+                  <option value="litauen">Litauen</option>
+                  <option value="lettland">Lettland</option>
+                  <option value="estland">Estland</option>
                 </select>
               </div>
 
               <div>
-                <label for="kørekortnummer">Kørekortnummer *</label>
+                <label for="kørekortnummer">Billede af kørekort *</label>
                 <input
-                  type="text"
-                  inputmode="numeric"
-                  pattern="[0-9]{8}"
+                  type="file"
                   id="kørekortnummer"
                   name="kørekortnummer"
-                  placeholder="Indtast kørekortnummer"
-                  maxlength="8"
+                  accept="image/*"
                   required
                 />
               </div>
             </section>
             <div class="bil-selektioner">
-              <label for="biltype" class="bil-heading"
-                >Fortrukken biltype *</label
+              <label id="bil-type" class="bil-heading"
+                >Fortrukken biltype</label
               >
 
-              <div class="bil-muligheder">
+              <div
+                class="bil-muligheder"
+                role="radiogroup"
+                aria-labelledby="bil-type"
+              >
                 <label class="bil-mulighed">
-                  <input type="checkbox" name="biltype" value="bybil" />
+                  <input type="radio" name="biltype" value="bybil" />
                   <span class="bil-title">Bybil</span>
                   <span class="bil-beskrivelse">Nem og økonomisk</span>
                 </label>
 
                 <label class="bil-mulighed">
-                  <input type="checkbox" name="biltype" value="suv" />
+                  <input type="radio" name="biltype" value="suv" />
                   <span class="bil-title">SUV</span>
                   <span class="bil-beskrivelse">Plads til det hele</span>
                 </label>
 
                 <label class="bil-mulighed">
-                  <input type="checkbox" name="biltype" value="elbil" />
+                  <input type="radio" name="biltype" value="elbil" />
                   <span class="bil-title">Elbil</span>
                   <span class="bil-beskrivelse">Stille og elektrisk</span>
+                </label>
+
+                <label class="bil-mulighed">
+                  <input type="radio" name="biltype" value="ingenpræference" />
+                  <span class="bil-title">Ingen præference</span>
+                  <span class="bil-beskrivelse">Vælger alle 3</span>
                 </label>
               </div>
             </div>
@@ -226,16 +261,15 @@
                 <h2>Bekræft og opret</h2>
               </div>
 
-              <div class="Afkrydsning">
+              <div class="afkrydsning">
                 <input type="checkbox" id="gyldigt-kørekort" required />
                 <label for="gyldigt-kørekort">
                   Jeg bekræfter, at jeg er fyldt 21 år og har et gyldigt
                   kørekort.*
                 </label>
               </div>
-              <br />
 
-              <div class="Afkrydsning">
+              <div class="afkrydsning">
                 <input type="checkbox" id="vilkår-og-betingelser" required />
                 <label for="vilkår-og-betingelser">
                   Jeg accepterer vilkår og betingelser samt
@@ -245,7 +279,7 @@
 
               <hr />
 
-              <div class="Afkrydsning">
+              <div class="afkrydsning">
                 <input type="checkbox" id="tilbud-og-nyheder" />
                 <label for="tilbud-og-nyheder">
                   Send mig gerne tilbud, nyheder og inspiration til min næste
@@ -261,7 +295,9 @@
                 </p>
               </div>
 
-              <button class="opret-profil" type="submit">Opret profil →</button>
+              <button class="opret-profil" type="submit" formaction="tak.html">
+                Opret profil →
+              </button>
             </section>
           </fieldset>
         </form>

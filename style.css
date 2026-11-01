@@ -3,6 +3,7 @@
   --background-color: #f5f5f5;
   --border-color: #e0e0e0;
   --text-color: #333;
+  --primary-color-light: #ffe5e050;
 }
 
 body {
@@ -17,8 +18,6 @@ main {
   height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
-
 
 .har-profil a {
   text-decoration: none;
@@ -237,7 +236,7 @@ fieldset {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 15px;
+  margin-block: 16px;
 }
 
 .afkrydsning input {
@@ -287,7 +286,7 @@ input[type="checkbox"] {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #35443d;
+  color: var(--text-color);
 }
 
 .bil-muligheder {
@@ -315,28 +314,28 @@ input[type="checkbox"] {
 .bil-title {
   font-size: 22px;
   font-weight: bold;
-  color: #35443d;
+  color: var(--text-color);
 }
 
 .bil-beskrivelse {
   font-size: 16px;
-  color: #858b87;
+  color: var(--text-color);
 }
 
 /* Selected card */
 .bil-mulighed:has(input:checked) {
-  border-color: #35443d;
-  background: #eaf0eb;
+  border-color: var(--primary-color);
+  background: var(--primary-color-light);
 }
 
 /* Keyboard accessibility */
 .bil-mulighed:has(input:focus-visible) {
-  outline: 3px solid #82988a;
+  outline: 3px solid var(--primary-color);
   outline-offset: 3px;
 }
 
 /* Gemmer checkmark ikonet */
-.bil-mulighed input[type="checkbox"] {
+.bil-mulighed input[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -359,6 +358,30 @@ form fieldset {
 .kørekort-præferencer {
   gap: 20px;
 }
+
+input[type="file"] {
+  border: 1px solid var(--border-color);
+  background-color: white;
+  padding-block: 0.5rem;
+}
+
+.thank-you-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.back-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 20px;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   main {
     grid-template-columns: 1fr;
