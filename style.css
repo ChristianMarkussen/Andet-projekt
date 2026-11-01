@@ -38,6 +38,7 @@ main {
   background-position: center;
   padding-top: 20px;
   color: var(--background-color);
+  max-width: 100%;
 }
 
 .hero-section h2 {
@@ -399,5 +400,9 @@ input[type="file"] {
 @media (max-width: 760px) {
   .inputBox {
     grid-template-columns: 1fr !important;
+  }
+
+  .bil-muligheder {
+    flex-direction: column;
   }
 }
