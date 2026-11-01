@@ -14,14 +14,25 @@ main {
   text-decoration: var(--text-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100dvh;
+  height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media (max-width: 1000px) {
   main {
     grid-template-columns: 1fr;
-    direction: rtl;
+  }
+  .hero-section {
+    order: 2;
+  }
+  .signup-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .inputBox {
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -70,14 +81,17 @@ main {
   position: relative;
   padding-left: 40px;
 }
+.header p {
+  margin-bottom: 12rem;
+}
 
 .hero-padding {
   margin-left: 6.7%;
   margin-right: 6.7%;
+  margin-bottom: 30px;
 }
-
 .hero-padding h2 {
-  font-size: 5rem;
+  margin-top: 1.8rem;
 }
 
 .info-box {
@@ -88,6 +102,7 @@ main {
   border-color: var(--border-color);
   max-width: 67%;
   backdrop-filter: blur(12px);
+  padding-block: 5px;
 }
 
 .info-box ul {
@@ -105,7 +120,7 @@ main {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-block: 12px;
 }
 
 .info-box li::before {
@@ -154,7 +169,7 @@ main {
 
 #forvent {
   accent-color: var(--primary-color);
-  width: 30%;
+  max-width: 80%;
 }
 
 label[for="særlige-ønsker"] {
@@ -189,10 +204,18 @@ fieldset input {
 }
 
 .inputBox input {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   margin-top: 5px;
+}
+
+.inputBox input:invalid {
+  border: 2px solid red;
+}
+
+.inputBox input:valid {
+  border: 2px solid green;
 }
 
 .inputBox select {
@@ -339,13 +362,16 @@ input[type="checkbox"] {
 }
 
 .bil-heading {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #35443d;
+  color: black;
 }
 
 form fieldset {
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+.kørekort-præferencer {
+  gap: 20px;
 }

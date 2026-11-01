@@ -150,12 +150,12 @@
           <fieldset class="kørekort-præferencer">
             <div class="sektion-overskrift">
               <span class="overskrift-nummer">02</span>
-              <h2>Kørekort og præferencert</h2>
+              <h2>Kørekort og præferencer</h2>
             </div>
 
             <section class="inputBox">
               <div>
-                <label for="udstedelsesland">Udstedt i*</label>
+                <label for="udstedelsesland">Udstedt i *</label>
                 <select id="udstedelsesland" name="udstedelsesland" required>
                   <option value="" disabled selected>Vælg et land*</option>
                   <option value="danmark">Danmark</option>
@@ -165,7 +165,7 @@
               </div>
 
               <div>
-                <label for="kørekortnummer">Kørekortnummer*</label>
+                <label for="kørekortnummer">Kørekortnummer *</label>
                 <input
                   type="text"
                   inputmode="numeric"
@@ -179,7 +179,9 @@
               </div>
             </section>
             <div class="bil-selektioner">
-              <p class="bil-heading">Foretrukken biltype *</p>
+              <label for="biltype" class="bil-heading"
+                >Fortrukken biltype *</label
+              >
 
               <div class="bil-muligheder">
                 <label class="bil-mulighed">
