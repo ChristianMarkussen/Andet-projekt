@@ -21,6 +21,7 @@ main {
 @media (max-width: 1000px) {
   main {
     grid-template-columns: 1fr;
+    direction: rtl;
   }
 }
 
@@ -248,6 +249,9 @@ input[type="checkbox"] {
   padding: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
+}
+.datasikkerhed p {
+  line-height: 1.5rem;
 }
 
 .opret-profil {
